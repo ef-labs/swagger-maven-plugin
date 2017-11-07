@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.kongchen</groupId>
     <artifactId>swagger-maven-plugin</artifactId>
-    <version>3.1.6-SNAPSHOT</version>
+    <version>3.1.6-EF1</version>
     <packaging>maven-plugin</packaging>
     <name>Swagger Maven Plugin</name>
     <description>
@@ -24,10 +24,10 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:kongchen/swagger-maven-plugin.git</connection>
-        <url>scm:git:git@github.com:kongchen/swagger-maven-plugin.git</url>
-        <developerConnection>scm:git:git@github.com:kongchen/swagger-maven-plugin.git</developerConnection>
-        <tag>HEAD</tag>
+        <connection>scm:git:git@github.com:ef-labs/swagger-maven-plugin.git</connection>
+        <url>scm:git:git@github.com:ef-labs/swagger-maven-plugin.git</url>
+        <developerConnection>scm:git:git@github.com:ef-labs/swagger-maven-plugin.git</developerConnection>
+        <tag>swagger-maven-plugin-3.1.6-EF1</tag>
     </scm>
 
     <developers>
@@ -294,5 +294,23 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>ef-release</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>etown-nexus-snapshots</id>
+                    <name>Etown Nexus Snapshots</name>
+                    <url>https://nexus-bos.englishtown.com/content/repositories/snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>etown-nexus-releases</id>
+                    <name>Etown Nexus Releases</name>
+                    <url>https://nexus-bos.englishtown.com/content/repositories/releases</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
 </project>
